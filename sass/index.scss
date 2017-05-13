@@ -1,3 +1,8 @@
+@import "about-paijan";
+@import "accessories";
+@import "faq";
+@import "support";
+
 body {
   background-color: white;
   display: flex;
@@ -155,9 +160,10 @@ nav {
   top: 90px;
   left: 0;
 
-  #test {
-    color: green;
-  }
+  @include faq;
+  @include accessories;
+  @include support;
+  @include about-paijan;
 }
 
 footer {
