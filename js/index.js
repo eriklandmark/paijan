@@ -1,17 +1,17 @@
 window.addEventListener("load", function () {
     setTimeout(function () {
-        loadPage("home");
+        loadPage("home", document.getElementById("nav_title_home"));
     }, 500);
 });
 
 function loadPage(page_name, element) {
     var titles = document.getElementsByClassName("nav_title");
     for(var i = 0; i < titles.length; i++) {
-        if (titles[i] != element) {
+        if (titles[i] !== element) {
             titles[i].style.fontWeight = "normal";
         }
     }
-    if (element != null) {
+    if (element !== null) {
         element.style.fontWeight = "bold";
     }
     var request = new XMLHttpRequest();
