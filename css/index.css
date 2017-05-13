@@ -116,6 +116,12 @@ nav {
   top: 90px;
   left: 0; }
 
+#loaded_page #error_main {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1em;
+    margin-left: 20px;
+}
+
 footer {
   display: none;
   position: relative;

@@ -12,7 +12,10 @@ window.addEventListener("load", function () {
     } else {
         name_of_page = url;
         getPageContent(url);
-        document.getElementById("nav_title_" + url).style.fontWeight = "bold";
+        var nav_element = document.getElementById("nav_title_" + url);
+        if (nav_element !== null) {
+            nav_element.style.fontWeight = "bold";
+        }
     }
     var loading_screen = document.getElementById("loading_div");
     setTimeout(function () {
@@ -68,6 +71,7 @@ function loadPage(page_name, element) {
     getPageContent(page_name);
     name_of_page = page_name;
     history.pushState(page_name, page_name, "?" + page_name);
+    console.clear();
     var loading_screen = document.getElementById("loading_div");
     loading_screen.style.animationPlayState = "initial";
     loading_screen.className = "fade_in_animation";
@@ -86,28 +90,39 @@ function loadPage(page_name, element) {
     document.title = "Paijan - " + page_name;
 }
 
-function getPageContent(page_name) {
+function getPageContent(page_name, error_code) {
     var request = new XMLHttpRequest();
     request.onreadystatechange = function() {
         if (this.readyState === 4) {
             if ( this.status === 200) {
                 if(name_of_page === page_name) {
                     if (load_content === true) {
-                        document.getElementById("loaded_div").innerHTML = this.responseText;
                         var loading_screen = document.getElementById("loading_div");
-                        loading_screen.className = "fade_out_animation";
-                        loading_screen.style.opacity = "0";
-                        load_content = false;
+                        if (page_name === "error_page" && (error_code !== null || error_code !== undefined)) {
+                            document.getElementById("loaded_page").innerHTML = this.responseText.replaceAll("#ec", error_code);
+                            loading_screen.className = "fade_out_animation";
+                            loading_screen.style.opacity = "0";
+                            load_content = false;
+                        } else {
+                            document.getElementById("loaded_page").innerHTML = this.responseText;
+                            loading_screen.className = "fade_out_animation";
+                            loading_screen.style.opacity = "0";
+                            load_content = false;
+                        }
                     } else {
-                        buffer = this.responseText;
+                        if (page_name === "error_page" && (error_code !== null || error_code !== undefined)) {
+                            buffer = this.responseText.replaceAll("#ec", error_code);
+                        } else {
+                            buffer = this.responseText;
+                        }
                     }
                 } else {
                     getPageContent(name_of_page);
                 }
             } else {
-                name_of_page = "error/" + this.status.toString();
-                getPageContent("error/" + this.status.toString());
-                console.log("Error loading page: '" + page_name + "'");
+                name_of_page = "error_page";
+                getPageContent("error_page", this.status);
+                console.log("Error loading page: '" + page_name + "'\nError code: " + this.status);
             }
         }
     };

@@ -2,6 +2,7 @@
 @import "accessories";
 @import "faq";
 @import "support";
+@import "error_page";
 
 body {
   background-color: white;
@@ -164,6 +165,7 @@ nav {
   @include accessories;
   @include support;
   @include about-paijan;
+  @include error_page;
 }
 
 footer {
