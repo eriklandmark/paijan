@@ -19,7 +19,7 @@ nav {
   position: fixed;
   z-index: 100;
 
-  p{
+  p {
     font-family: "Open Sans", sans-serif;
     margin: 0;
     padding: 10px;
@@ -33,10 +33,6 @@ nav {
 
   .nav_title:hover {
     cursor: pointer;
-    font-weight: bold;
-  }
-
-  #nav_title_home {
     font-weight: bold;
   }
 
@@ -122,7 +118,6 @@ nav {
     left: calc(50vw - (441px/2));
     width: 441px;
   }
-
 }
 
 .fade_in_animation {
@@ -135,7 +130,7 @@ nav {
    animation-duration: 0.5s;
    animation-name: fadeout;
    animation-timing-function: linear;
- }
+}
 
 @keyframes fadein {
   from {

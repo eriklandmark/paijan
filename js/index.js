@@ -1,10 +1,19 @@
 var buffer = "";
 var load_content = false;
-var name_of_page = "home";
+var name_of_page = "";
 var is_loading = false;
 
 window.addEventListener("load", function () {
-    getPageContent("home");
+    var url = window.location.href.split("?")[1];
+    if(url === "" || url === null || url === undefined) {
+        name_of_page = "home";
+        getPageContent("home");
+        document.getElementById("nav_title_home").style.fontWeight = "bold";
+    } else {
+        name_of_page = url;
+        getPageContent(url);
+        document.getElementById("nav_title_" + url).style.fontWeight = "bold";
+    }
     var loading_screen = document.getElementById("loading_div");
     setTimeout(function () {
         if (buffer !== null || buffer !== "") {
@@ -33,9 +42,32 @@ document.getElementById("loading_div").addEventListener("animationend", function
     }
 });
 
+window.addEventListener("popstate", function (event) {
+    var prev_page = event.state;
+    getPageContent(prev_page);
+    name_of_page = prev_page;
+    var loading_screen = document.getElementById("loading_div");
+    loading_screen.style.animationPlayState = "initial";
+    loading_screen.className = "fade_in_animation";
+    loading_screen.style.opacity = "1";
+    is_loading = true;
+    var element = document.getElementById("nav_title_" + prev_page);
+    var titles = document.getElementsByClassName("nav_title");
+    for(var i = 0; i < titles.length; i++) {
+        if (titles[i] !== element) {
+            titles[i].style.fontWeight = "normal";
+        }
+    }
+    if (element !== null) {
+        element.style.fontWeight = "bold";
+    }
+    document.title = "Paijan - " + prev_page;
+});
+
 function loadPage(page_name, element) {
     getPageContent(page_name);
     name_of_page = page_name;
+    history.pushState(page_name, page_name, "?" + page_name);
     var loading_screen = document.getElementById("loading_div");
     loading_screen.style.animationPlayState = "initial";
     loading_screen.className = "fade_in_animation";
@@ -73,6 +105,8 @@ function getPageContent(page_name) {
                     getPageContent(name_of_page);
                 }
             } else {
+                name_of_page = "error/" + this.status.toString();
+                getPageContent("error/" + this.status.toString());
                 console.log("Error loading page: '" + page_name + "'");
             }
         }
