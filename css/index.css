@@ -112,9 +112,8 @@ nav {
   to {
     opacity: 0; } }
 #loaded_page {
-  position: absolute;
-  top: 90px;
-  left: 0; }
+    margin-top: 90px;
+}
 
 #loaded_page #error_main {
     font-family: "Open Sans", sans-serif;
@@ -123,7 +122,7 @@ nav {
 }
 
 footer {
-  display: none;
+    display: flex;
   position: relative;
   bottom: 0;
   width: 100vw;

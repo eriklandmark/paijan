@@ -9,6 +9,7 @@ window.addEventListener("load", function () {
         name_of_page = "home";
         getPageContent("home");
         document.getElementById("nav_title_home").style.fontWeight = "bold";
+        document.title = "Paijan - " + url;
     } else {
         name_of_page = url;
         getPageContent(url);
@@ -16,11 +17,17 @@ window.addEventListener("load", function () {
         if (nav_element !== null) {
             nav_element.style.fontWeight = "bold";
         }
+        document.title = "Paijan - " + url;
     }
     var loading_screen = document.getElementById("loading_div");
     setTimeout(function () {
         if (buffer !== null || buffer !== "") {
             document.getElementById("loaded_page").innerHTML = buffer;
+            if (Math.max(document.body.scrollHeight, document.body.offsetHeight) > window.innerHeight) {
+                document.getElementsByTagName("footer")[0].style.position = "relative";
+            } else {
+                document.getElementsByTagName("footer")[0].style.position = "absolute";
+            }
             loading_screen.className = "fade_out_animation";
             loading_screen.style.opacity = "0";
             load_content = false;
@@ -34,6 +41,11 @@ document.getElementById("loading_div").addEventListener("animationend", function
     if(is_loading) {
         if (buffer !== null || buffer !== "") {
             document.getElementById("loaded_page").innerHTML = buffer;
+            if (Math.max(document.body.scrollHeight, document.body.offsetHeight) > window.innerHeight) {
+                document.getElementsByTagName("footer")[0].style.position = "relative";
+            } else {
+                document.getElementsByTagName("footer")[0].style.position = "absolute";
+            }
             var loading_screen = document.getElementById("loading_div");
             loading_screen.className = "fade_out_animation";
             loading_screen.style.opacity = "0";
@@ -100,11 +112,21 @@ function getPageContent(page_name, error_code) {
                         var loading_screen = document.getElementById("loading_div");
                         if (page_name === "error_page" && (error_code !== null || error_code !== undefined)) {
                             document.getElementById("loaded_page").innerHTML = this.responseText.replaceAll("#ec", error_code);
+                            if (Math.max(document.body.scrollHeight, document.body.offsetHeight) > window.innerHeight) {
+                                document.getElementsByTagName("footer")[0].style.position = "relative";
+                            } else {
+                                document.getElementsByTagName("footer")[0].style.position = "absolute";
+                            }
                             loading_screen.className = "fade_out_animation";
                             loading_screen.style.opacity = "0";
                             load_content = false;
                         } else {
                             document.getElementById("loaded_page").innerHTML = this.responseText;
+                            if (Math.max(document.body.scrollHeight, document.body.offsetHeight) > window.innerHeight) {
+                                document.getElementsByTagName("footer")[0].style.position = "relative";
+                            } else {
+                                document.getElementsByTagName("footer")[0].style.position = "absolute";
+                            }
                             loading_screen.className = "fade_out_animation";
                             loading_screen.style.opacity = "0";
                             load_content = false;
