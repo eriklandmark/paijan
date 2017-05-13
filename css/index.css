@@ -15,7 +15,8 @@ nav {
   height: 80px;
   width: 100vw;
   background-color: transparent;
-  position: fixed; }
+  position: fixed;
+  z-index: 100; }
   nav p {
     font-family: "Open Sans", sans-serif;
     margin: 0;
@@ -26,6 +27,8 @@ nav {
       font-weight: bold; }
   nav .nav_title:hover {
     cursor: pointer;
+    font-weight: bold; }
+  nav #nav_title_home {
     font-weight: bold; }
   nav #left_nav, nav #right_nav {
     width: 100%;
@@ -51,7 +54,7 @@ nav {
     height: 100%;
     border-bottom-left-radius: 40%;
     border-bottom-right-radius: 40%;
-    z-index: 2;
+    z-index: 101;
     box-shadow: 0 0 25px black;
     display: flex;
     flex-direction: column;
@@ -59,11 +62,9 @@ nav {
     justify-content: center; }
     nav #center_nav img {
       width: 70%;
-      z-index: 3; }
+      z-index: 102; }
     nav #center_nav:hover {
-      cursor: pointer;
-      width: 60%;
-      height: 110%; }
+      cursor: pointer; }
   nav #right_nav {
     background-color: white;
     display: flex;
@@ -78,14 +79,44 @@ nav {
     nav #right_nav img {
       width: 32px; }
 
-#loading_gif {
+#loading_div {
   position: fixed;
-  top: calc(50vh - (291px/2));
-  left: calc(50vw - (441px/2));
-  width: 441px; }
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  z-index: 99; }
+  #loading_div img {
+    position: fixed;
+    top: calc(50vh - (291px/2));
+    left: calc(50vw - (441px/2));
+    width: 441px; }
 
+.fade_in_animation {
+  animation-duration: 0.5s;
+  animation-name: fadein;
+  animation-timing-function: linear; }
+
+.fade_out_animation {
+  animation-duration: 0.5s;
+  animation-name: fadeout;
+  animation-timing-function: linear; }
+
+@keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@keyframes fadeout {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
 #loaded_page {
-  margin-top: 90px; }
+  position: absolute;
+  top: 90px;
+  left: 0; }
   #loaded_page #test {
     color: green; }
 
