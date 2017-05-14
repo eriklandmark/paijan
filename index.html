@@ -9,7 +9,7 @@
         <link rel="icon" type="image/png" href="images/favicon.png" sizes="32x32">
     </head>
     <body>
-        <nav>
+        <nav id="desktop_nav">
             <div id="left_nav">
                 <div class="nav_wrapper">
                     <p onclick="loadPage('home', this)" class="nav_title" id="nav_title_home">Hem</p>
@@ -29,7 +29,34 @@
             </div>
         </nav>
 
-        <div id="loaded_page"> </div>
+        <nav id="mobile_nav">
+            <div id="left_M_nav">
+                <img src="images/logga.png" alt="" onclick="loadPage('home', document.getElementById('nav_title_home'))">
+            </div>
+            <div id="right_M_nav">
+                <img src="icons/search.svg" alt="" id="mobile_search_icon">
+            </div>
+        </nav>
+
+        <menu id="mobile_menu">
+            <img src="images/logga.png" alt="">
+
+            <div id="mobile_links">
+                <p onclick="loadPage('home', this); close_mobile_menu()" class="nav_title" id="mobile_nav_title_home">Hem</p>
+                <p onclick="loadPage('about-paijan', this); close_mobile_menu()" class="nav_title" id="mobile_nav_title_about-paijan">Om Paijan</p>
+                <p onclick="loadPage('accessories', this); close_mobile_menu()" class="nav_title" id="mobile_nav_title_accessories">Tillbehör</p>
+                <p onclick="loadPage('support', this); close_mobile_menu()" class="nav_title" id="mobile_nav_title_support">Support</p>
+                <p onclick="loadPage('faq', this); close_mobile_menu()" class="nav_title" id="mobile_nav_title_faq">Vanliga Frågor</p>
+            </div>
+        </menu>
+
+        <div id="menu_icon" onclick="on_menu_click()">
+            <canvas id="top_bar"></canvas>
+            <canvas id="middle_bar"></canvas>
+            <canvas id="bottom_bar"></canvas>
+        </div>
+
+        <div id="loaded_page"></div>
 
         <div id="loading_div">
             <img id="loading_gif" src="icons/Loading_icon.gif" alt="">
