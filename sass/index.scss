@@ -3,11 +3,15 @@
 @import "faq";
 @import "support";
 @import "error_page";
+@import "home";
 
 $max_mobile_width: 799px;
 
 $menu_icon_width: 31px;
 $menu_icon_height: 30px;
+
+$nav_bar_height: 80px;
+$footer_height: 80px;
 
 body {
   background-color: white;
@@ -51,7 +55,7 @@ body {
 #desktop_nav {
   flex-direction: row;
   justify-content: center;
-  height: 80px;
+  height: $nav_bar_height;
   width: 100vw;
   background-color: transparent;
   position: fixed;
@@ -416,6 +420,7 @@ body {
   @include support;
   @include about-paijan;
   @include error_page;
+  @include home;
 }
 
 footer {
@@ -427,9 +432,10 @@ footer {
   bottom: 0;
   width: 100vw;
   background-color: lightgray;
-  height: 80px;
+  height: $footer_height;
   font-family: "Open Sans", sans-serif;
   color: rgba(0, 0, 0, 0.7);
+  margin-top: 50px;
 
   p {
     font-size: 0.8em;

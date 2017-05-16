@@ -1,0 +1,25 @@
+@mixin home() {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .display {
+    width: 90vw;
+    height: calc(95vh - #{($nav_bar_height + $footer_height)});
+    margin: 50px 0 50px 0;
+    min-height: 340px;
+    background-color: lightgray;
+  }
+
+  #display_1 {
+
+  }
+
+  #display_2 {
+
+  }
+
+  #display_3 {
+
+  }
+}
