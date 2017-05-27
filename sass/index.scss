@@ -14,7 +14,6 @@ $nav_bar_height: 80px;
 $footer_height: 80px;
 $footer_mobile_height: 50px;
 $nav_background_color: #4CAF50;
-$nav_border_color: transparent;
 
 body {
   background-color: white;
@@ -69,7 +68,7 @@ body {
     margin: 0;
     padding: 10px;
     font-size: 1em;
-    color: black;
+    color: white;
 
     &:hover {
       cursor: pointer;
@@ -98,8 +97,6 @@ body {
     //box-shadow: -12px 2px 20px black;
     margin-right: 7vw;
     border-bottom-right-radius: 40px;
-    border-right: solid 2px $nav_border_color;
-    border-bottom: solid 2px $nav_border_color;
     padding:  0 20px 0 20px;
   }
 
@@ -109,15 +106,12 @@ body {
     border-bottom-left-radius: 40%;
     border-bottom-right-radius: 40%;
     z-index: 101;
-    box-shadow: 0 0 25px black;
+    //box-shadow: 0 0 25px black;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: $nav_background_color;
-    //border-right: solid 2px $nav_border_color;
-    //border-left: solid 2px $nav_border_color;
-    //border-bottom: solid 2px $nav_border_color;
 
     img {
       width: 70%;
@@ -138,9 +132,6 @@ body {
     margin-left: 7vw;
     border-bottom-left-radius: 40px;
     padding:  0 20px 0 20px;
-
-    border-left: solid 2px $nav_border_color;
-    border-bottom: solid 2px $nav_border_color;
 
     .nav_wrapper {
       max-width: 300px;

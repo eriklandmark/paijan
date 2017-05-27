@@ -39,7 +39,7 @@ body {
     margin: 0;
     padding: 10px;
     font-size: 1em;
-    color: black; }
+    color: white; }
     #desktop_nav p:hover {
       cursor: pointer; }
   #desktop_nav #left_nav, #desktop_nav #right_nav {
@@ -59,8 +59,6 @@ body {
     justify-content: center;
     margin-right: 7vw;
     border-bottom-right-radius: 40px;
-    border-right: solid 2px transparent;
-    border-bottom: solid 2px transparent;
     padding: 0 20px 0 20px; }
   #desktop_nav #center_nav {
     width: 50%;
@@ -68,7 +66,6 @@ body {
     border-bottom-left-radius: 40%;
     border-bottom-right-radius: 40%;
     z-index: 101;
-    box-shadow: 0 0 25px black;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -86,9 +83,7 @@ body {
     justify-content: center;
     margin-left: 7vw;
     border-bottom-left-radius: 40px;
-    padding: 0 20px 0 20px;
-    border-left: solid 2px transparent;
-    border-bottom: solid 2px transparent; }
+    padding: 0 20px 0 20px; }
     #desktop_nav #right_nav .nav_wrapper {
       max-width: 300px; }
     #desktop_nav #right_nav img {
@@ -305,6 +300,23 @@ body {
     padding: 30px 0 30px 0; }
     #loaded_page .display h1 {
       font-family: "Open Sans", sans-serif; }
+    #loaded_page .display .display_info_div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center; }
+      #loaded_page .display .display_info_div input[type="button"] {
+        border: none;
+        background-color: #2E7D32;
+        font-family: "Open Sans", sans-serif;
+        font-size: 1em;
+        border-radius: 8px;
+        padding: 5px 20px 5px 20px;
+        color: white;
+        margin-top: 40px; }
+        #loaded_page .display .display_info_div input[type="button"]:hover {
+          cursor: pointer; }
     @media screen and (min-width: 800px) {
       #loaded_page .display .display_info_div {
         max-width: 40vmin; }
@@ -320,23 +332,13 @@ body {
         #loaded_page .display .display_info_div {
           width: 90vw;
           justify-content: center;
-          text-align: center; }
+          align-items: center; }
         #loaded_page .display .display_img {
           width: 70vmin; }
         #loaded_page .display .mobile_read_more_button {
           display: flex; }
         #loaded_page .display .desktop_read_more_button {
           display: none; } }
-    #loaded_page .display input[type="button"] {
-      border: none;
-      background-color: #2E7D32;
-      font-family: "Open Sans", sans-serif;
-      font-size: 1em;
-      border-radius: 5px;
-      padding: 5px 20px 5px 20px;
-      color: white; }
-      #loaded_page .display input[type="button"]:hover {
-        cursor: pointer; }
   #loaded_page #display_1 {
     background-color: white; }
   #loaded_page #display_2 {

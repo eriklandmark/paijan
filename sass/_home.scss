@@ -16,6 +16,29 @@
       font-family: "Open Sans", sans-serif;
     }
 
+    .display_info_div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      input[type="button"] {
+        border: none;
+        background-color: #2E7D32;
+        font-family: "Open Sans", sans-serif;
+        font-size: 1em;
+        border-radius: 8px;
+        padding: 5px 20px 5px 20px;
+        color: white;
+        margin-top: 40px;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
     @media screen and (min-width: $max_mobile_width + 1px) {
       .display_info_div {
         max-width: 40vmin;
@@ -40,7 +63,7 @@
       .display_info_div {
         width: 90vw;
         justify-content: center;
-        text-align: center;
+        align-items: center;
       }
 
       .display_img {
@@ -53,22 +76,6 @@
 
       .desktop_read_more_button {
         display: none;
-      }
-    }
-
-    input[type="button"] {
-      //border: solid #0D47A1 2px;
-      border: none;
-      background-color: #2E7D32;
-      font-family: "Open Sans", sans-serif;
-      font-size: 1em;
-      border-radius: 5px;
-      padding: 5px 20px 5px 20px;
-      color: white;
-
-      &:hover {
-        cursor: pointer;
-        //background-color: rgba(0,0,0,0.05);
       }
     }
   }
