@@ -12,6 +12,9 @@ $menu_icon_height: 30px;
 
 $nav_bar_height: 80px;
 $footer_height: 80px;
+$footer_mobile_height: 50px;
+$nav_background_color: #4CAF50;
+$nav_border_color: transparent;
 
 body {
   background-color: white;
@@ -66,16 +69,11 @@ body {
     margin: 0;
     padding: 10px;
     font-size: 1em;
+    color: black;
 
     &:hover {
       cursor: pointer;
-      font-weight: bold;
     }
-  }
-
-  .nav_title:hover {
-    cursor: pointer;
-    font-weight: bold;
   }
 
   #left_nav, #right_nav{
@@ -93,13 +91,15 @@ body {
   }
 
   #left_nav {
-    background-color: white;
+    background-color: $nav_background_color;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    box-shadow: -12px 2px 20px black;
+    //box-shadow: -12px 2px 20px black;
     margin-right: 7vw;
     border-bottom-right-radius: 40px;
+    border-right: solid 2px $nav_border_color;
+    border-bottom: solid 2px $nav_border_color;
     padding:  0 20px 0 20px;
   }
 
@@ -114,6 +114,10 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: $nav_background_color;
+    //border-right: solid 2px $nav_border_color;
+    //border-left: solid 2px $nav_border_color;
+    //border-bottom: solid 2px $nav_border_color;
 
     img {
       width: 70%;
@@ -126,14 +130,17 @@ body {
   }
 
   #right_nav {
-    background-color: white;
+    background-color: $nav_background_color;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    box-shadow: 12px 2px 20px black;
+    //box-shadow: 12px 2px 20px black;
     margin-left: 7vw;
     border-bottom-left-radius: 40px;
     padding:  0 20px 0 20px;
+
+    border-left: solid 2px $nav_border_color;
+    border-bottom: solid 2px $nav_border_color;
 
     .nav_wrapper {
       max-width: 300px;
@@ -261,7 +268,7 @@ body {
   #top_bar, #middle_bar, #bottom_bar {
     width: $menu_icon_width;
     height: $menu_icon_height/5;
-    background-color: black;
+    background-color: #1B5E20;
     border-radius: $menu_icon_width / 10;
   }
 
@@ -431,11 +438,16 @@ footer {
   position: relative;
   bottom: 0;
   width: 100vw;
-  background-color: lightgray;
+  background-color: #81C784;
   height: $footer_height;
   font-family: "Open Sans", sans-serif;
   color: rgba(0, 0, 0, 0.7);
-  margin-top: 50px;
+  margin-top: 20px;
+
+  @media screen and (max-width: $max_mobile_width) {
+    font-size: 0.7em;
+    height: $footer_mobile_height;
+  }
 
   p {
     font-size: 0.8em;

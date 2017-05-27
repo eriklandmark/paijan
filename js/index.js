@@ -64,6 +64,8 @@ document.getElementById("loading_div").addEventListener("animationend", function
             load_content = true;
         }
         is_loading = false;
+    } else {
+        document.getElementById("loading_div").style.display = "none";
     }
 });
 
@@ -72,6 +74,7 @@ window.addEventListener("popstate", function (event) {
     getPageContent(prev_page);
     name_of_page = prev_page;
     var loading_screen = document.getElementById("loading_div");
+    loading_screen.style.display = "flex";
     loading_screen.style.animationPlayState = "initial";
     loading_screen.className = "fade_in_animation";
     loading_screen.style.opacity = "1";
@@ -96,6 +99,7 @@ function loadPage(page_name, element) {
     name_of_page = page_name;
     history.pushState(page_name, page_name, "?" + page_name);
     var loading_screen = document.getElementById("loading_div");
+    loading_screen.style.display = "flex";
     loading_screen.style.animationPlayState = "initial";
     loading_screen.className = "fade_in_animation";
     loading_screen.style.opacity = "1";
