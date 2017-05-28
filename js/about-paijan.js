@@ -4,6 +4,7 @@ var open_picture = 1;
 var total_pictures = 4;
 
 function on_about_paijan_load() {
+    open_picture = 1;
     bildspel_interval = setInterval(function () {
         if(!bildspel_pause) {
             change_picture();
