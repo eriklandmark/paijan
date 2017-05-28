@@ -66,6 +66,9 @@ document.getElementById("loading_div").addEventListener("animationend", function
         is_loading = false;
     } else {
         document.getElementById("loading_div").style.display = "none";
+        if(name_of_page === "about-paijan") {
+            on_about_paijan_load();
+        }
     }
 });
 
@@ -95,6 +98,10 @@ window.addEventListener("popstate", function (event) {
 });
 
 function loadPage(page_name, element) {
+    if(name_of_page === "about-paijan") {
+        on_about_paijan_unload();
+    }
+
     getPageContent(page_name);
     name_of_page = page_name;
     history.pushState(page_name, page_name, "?" + page_name);

@@ -33,7 +33,7 @@ body {
   font-weight: bold; }
 
 #desktop_nav {
-  background-color: rgba(76, 175, 80, 0.5);
+  background-color: #4caf50;
   flex-direction: row;
   justify-content: center;
   height: 60px;
@@ -45,7 +45,7 @@ body {
     margin: 0;
     padding: 10px;
     font-size: 1em;
-    color: black; }
+    color: white; }
     #desktop_nav p:hover {
       cursor: pointer; }
   #desktop_nav #left_nav, #desktop_nav #right_nav {
@@ -142,7 +142,7 @@ body {
     right: -120vw; } }
 #mobile_nav {
   position: fixed;
-  background-color: rgba(76, 175, 80, 0.5);
+  background-color: #4caf50;
   top: 0;
   left: 0;
   width: 100vw;
@@ -283,17 +283,42 @@ body {
   to {
     opacity: 0; } }
 #loaded_page {
-  margin-top: 90px;
+  margin-top: 60px;
   display: flex;
-  flex-direction: column;
-  align-items: center; }
+  flex-direction: column; }
+  #loaded_page #bildspel_on_paijan #bild_1, #loaded_page #bildspel_on_paijan #bild_2, #loaded_page #bildspel_on_paijan #bild_3, #loaded_page #bildspel_on_paijan #bild_4 {
+    width: 100vw;
+    height: calc(50vh - 60px);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    opacity: 0; }
+  #loaded_page #bildspel_on_paijan #bild_1 {
+    background-color: red;
+    z-index: 11;
+    opacity: 1; }
+  #loaded_page #bildspel_on_paijan #bild_2 {
+    background-color: blue; }
+  #loaded_page #bildspel_on_paijan #bild_3 {
+    background-color: green; }
+  #loaded_page #bildspel_on_paijan #bild_4 {
+    background-color: yellow; }
+  #loaded_page .slideshow_fadeout {
+    animation-duration: 0.5s;
+    animation-name: slideshowfadeout;
+    animation-timing-function: linear; }
+@keyframes slideshowfadeout {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
   #loaded_page #error_main {
     font-family: "Open Sans", sans-serif;
     font-size: 1em;
     margin-left: 20px; }
   #loaded_page .display {
     width: 100vw;
-    min-height: calc(100vh - 140px);
+    min-height: calc(100vh - 60px);
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -363,10 +388,9 @@ footer {
   position: relative;
   bottom: 0;
   width: 100vw;
-  background-color: rgba(76, 175, 80, 0.5);
+  background-color: #4caf50;
   height: 80px;
-  font-family: "Open Sans", sans-serif;
-  margin-top: 20px; }
+  font-family: "Open Sans", sans-serif; }
   @media screen and (max-width: 799px) {
     footer {
       font-size: 0.7em;

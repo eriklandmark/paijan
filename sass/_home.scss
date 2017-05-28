@@ -1,11 +1,7 @@
 @mixin home() {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
   .display {
     width: 100vw;
-    min-height: calc(100vh - #{($nav_bar_height + $footer_height)});
+    min-height: calc(100vh - #{$nav_bar_height});
     display: flex;
     flex-direction: row;
     justify-content: space-around;

@@ -1,3 +1,46 @@
 @mixin about-paijan {
-  
+  #bildspel_on_paijan {
+
+    #bild_1, #bild_2, #bild_3, #bild_4 {
+      width: 100vw;
+      height: calc(50vh - #{$nav_bar_height});
+      position: absolute;
+      top: $nav_bar_height;
+      left: 0;
+      opacity: 0;
+    }
+
+    #bild_1 {
+      background-color: red;
+      z-index: 11;
+      opacity: 1;
+    }
+
+    #bild_2 {
+      background-color: blue;
+    }
+
+    #bild_3 {
+      background-color: green;
+    }
+
+    #bild_4 {
+      background-color: yellow;
+    }
+  }
+
+  .slideshow_fadeout {
+    animation-duration: 0.5s;
+    animation-name: slideshowfadeout;
+    animation-timing-function: linear;
+  }
+
+  @keyframes slideshowfadeout {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
 }

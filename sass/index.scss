@@ -13,7 +13,7 @@ $menu_icon_height: 30px;
 $nav_bar_height: 60px;
 $footer_height: 80px;
 $footer_mobile_height: 50px;
-$nav_background_color: rgba(76, 175, 80, 0.5);
+$nav_background_color: rgba(76, 175, 80, 1);
 
 body {
   background-color: white;
@@ -75,7 +75,7 @@ body {
     margin: 0;
     padding: 10px;
     font-size: 1em;
-    color: black;
+    color: white;
 
     &:hover {
       cursor: pointer;
@@ -413,7 +413,9 @@ body {
 }
 
 #loaded_page {
-  margin-top: 90px;
+  margin-top: $nav_bar_height;
+  display: flex;
+  flex-direction: column;
 
   @include faq;
   @include accessories;
@@ -434,7 +436,6 @@ footer {
   background-color: $nav_background_color;
   height: $footer_height;
   font-family: "Open Sans", sans-serif;
-  margin-top: 20px;
 
   @media screen and (max-width: $max_mobile_width) {
     font-size: 0.7em;
