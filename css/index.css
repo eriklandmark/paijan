@@ -70,10 +70,17 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #4CAF50; }
-    #desktop_nav #center_nav img {
+    background-color: #4CAF50;
+    /*img {
       width: 70%;
-      z-index: 102; }
+      z-index: 102;
+    }*/ }
+    #desktop_nav #center_nav #logga_text {
+      font-family: Tahoma, sans-serif;
+      letter-spacing: 2px;
+      font-size: 1.6em;
+      font-weight: bold;
+      margin-top: -10px; }
     #desktop_nav #center_nav:hover {
       cursor: pointer; }
   #desktop_nav #right_nav {

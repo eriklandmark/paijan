@@ -113,9 +113,17 @@ body {
     justify-content: center;
     background-color: $nav_background_color;
 
-    img {
+    /*img {
       width: 70%;
       z-index: 102;
+    }*/
+
+    #logga_text {
+      font-family: Tahoma, sans-serif;
+      letter-spacing: 2px;
+      font-size: 1.6em;
+      font-weight: bold;
+      margin-top: -10px;
     }
 
     &:hover {
