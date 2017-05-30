@@ -4,6 +4,7 @@
 @import "support";
 @import "error_page";
 @import "home";
+@import "mixins/design";
 
 $max_mobile_width: 799px;
 
@@ -412,6 +413,8 @@ body {
   }
 }
 
+@include design;
+
 #loaded_page {
   margin-top: $nav_bar_height;
   display: flex;
@@ -436,6 +439,7 @@ footer {
   background-color: $nav_background_color;
   height: $footer_height;
   font-family: "Open Sans", sans-serif;
+  margin-top: 5vh;
 
   @media screen and (max-width: $max_mobile_width) {
     font-size: 0.7em;

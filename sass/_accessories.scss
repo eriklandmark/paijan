@@ -1,3 +1,79 @@
 @mixin accessories() {
-  
+  #accessories {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    font-family: "Open Sans", sans-serif;
+
+    #accessories_info_text {
+      margin: 0 5vh 30px 5vh;
+    }
+
+    #page_divider {
+      width: 85vw;
+      height: 4px;
+      background-color: lightgreen;
+      margin: 5vh 0 5vh 0;
+    }
+
+    .accessories_read_more_button {
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+
+    #paijan_headphones_image {
+      background: url("../images/slideshow_4.bmp") no-repeat center center;
+      background-size: cover;
+    }
+
+    #wireless_charger_image {
+      background: url("../images/slideshow_2.bmp") no-repeat center center;
+      background-size: cover;
+    }
+
+    .product_image {
+      width: 50%;
+      @media screen and (max-width: $max_mobile_width) {
+        flex-direction: column;
+        width: 100%;
+        min-height: 250px;
+        height: 50%;
+      }
+    }
+
+    .product_info {
+      width: 50%;
+      background-color: #E8F5E9;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @media screen and (max-width: $max_mobile_width) {
+        flex-direction: column;
+        width: 100%;
+        height: 50%;
+      }
+
+      div {
+        width: 90%;
+      }
+    }
+
+    #sound_devices, #charging_devices {
+      display: flex;
+      flex-direction: column;
+      width: 80vw;
+
+      #paijan_headphones, #wireless_charger {
+        display: flex;
+        flex-direction: row;
+        min-height: 350px;
+
+        @media screen and (max-width: $max_mobile_width) {
+          flex-direction: column;
+          min-height: 500px;
+        }
+      }
+    }
+  }
 }
