@@ -1,6 +1,5 @@
 @mixin about-paijan {
   #bildspel_on_paijan {
-
     #bild_1, #bild_2, #bild_3, #bild_4 {
       width: 100vw;
       height: calc(50vh - #{$nav_bar_height});
@@ -8,24 +7,29 @@
       top: $nav_bar_height;
       left: 0;
       opacity: 0;
+      background-size: cover;
     }
 
     #bild_1 {
-      background-color: red;
+      //background-color: red;
       z-index: 11;
       opacity: 1;
+      background-image: url("../images/slideshow_1.bmp");
     }
 
     #bild_2 {
-      background-color: blue;
+      //background-color: blue;
+      background-image: url("../images/slideshow_2.bmp");
     }
 
     #bild_3 {
-      background-color: green;
+      //background-color: green;
+      background-image: url("../images/slideshow_3.bmp");
     }
 
     #bild_4 {
-      background-color: yellow;
+      //background-color: yellow;
+      background-image: url("../images/slideshow_4.bmp");
     }
   }
 

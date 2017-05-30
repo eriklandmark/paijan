@@ -292,17 +292,18 @@ body {
     position: absolute;
     top: 60px;
     left: 0;
-    opacity: 0; }
+    opacity: 0;
+    background-size: cover; }
   #loaded_page #bildspel_on_paijan #bild_1 {
-    background-color: red;
     z-index: 11;
-    opacity: 1; }
+    opacity: 1;
+    background-image: url("../images/slideshow_1.bmp"); }
   #loaded_page #bildspel_on_paijan #bild_2 {
-    background-color: blue; }
+    background-image: url("../images/slideshow_2.bmp"); }
   #loaded_page #bildspel_on_paijan #bild_3 {
-    background-color: green; }
+    background-image: url("../images/slideshow_3.bmp"); }
   #loaded_page #bildspel_on_paijan #bild_4 {
-    background-color: yellow; }
+    background-image: url("../images/slideshow_4.bmp"); }
   #loaded_page .slideshow_fadeout {
     animation-duration: 0.5s;
     animation-name: slideshowfadeout;
