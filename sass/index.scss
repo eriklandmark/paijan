@@ -13,7 +13,7 @@ $menu_icon_height: 30px;
 
 $nav_bar_height: 60px;
 $footer_height: 80px;
-$footer_mobile_height: 50px;
+$footer_mobile_height: 100px;
 $nav_background_color: rgba(76, 175, 80, 1);
 
 body {
@@ -142,7 +142,7 @@ body {
 #mobile_menu {
   display: flex;
   flex-direction: column;
-  background-color: #E8F5E9;
+  background-color: $nav_background_color;
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -154,16 +154,11 @@ body {
   box-shadow: 0 0 20vw black;
   align-items: center;
 
-  img {
-    width: 200px;
-    height: 40px;
-    margin-top: 10vh;
-  }
-
   #mobile_menu_logga {
     margin-top: 15vh;
     margin-bottom: 0;
     font-size: 3em;
+    color: white;
   }
 
   #mobile_links {
@@ -178,6 +173,7 @@ body {
       font-family: "Open Sans", sans-serif;
       margin: 0;
       padding: 5px;
+      color: white;
     }
   }
 }
@@ -445,10 +441,15 @@ footer {
   @media screen and (max-width: $max_mobile_width) {
     font-size: 0.7em;
     height: $footer_mobile_height;
+    flex-direction: column;
   }
 
   p {
     font-size: 0.8em;
     margin: 0 10px 0 10px;
+
+    @media screen and (max-width: $max_mobile_width) {
+      margin: 5px 0 5px 0;
+    }
   }
 }

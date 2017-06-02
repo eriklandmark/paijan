@@ -89,7 +89,7 @@ body {
 #mobile_menu {
   display: flex;
   flex-direction: column;
-  background-color: #E8F5E9;
+  background-color: #4caf50;
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -100,14 +100,11 @@ body {
   padding: 0;
   box-shadow: 0 0 20vw black;
   align-items: center; }
-  #mobile_menu img {
-    width: 200px;
-    height: 40px;
-    margin-top: 10vh; }
   #mobile_menu #mobile_menu_logga {
     margin-top: 15vh;
     margin-bottom: 0;
-    font-size: 3em; }
+    font-size: 3em;
+    color: white; }
   #mobile_menu #mobile_links {
     margin-top: 10vh;
     display: flex;
@@ -118,7 +115,8 @@ body {
       font-size: 1.4em;
       font-family: "Open Sans", sans-serif;
       margin: 0;
-      padding: 5px; }
+      padding: 5px;
+      color: white; }
 
 .mobile_menu_animate_in {
   animation-duration: 0.7s;
@@ -306,14 +304,13 @@ body {
     font-family: "Open Sans", sans-serif; }
     #loaded_page #accessories #accessories_info_text {
       margin: 0 5vh 30px 5vh; }
-    #loaded_page #accessories #page_divider {
-      width: 85vw;
-      height: 4px;
-      background-color: lightgreen;
-      margin: 5vh 0 5vh 0; }
     #loaded_page #accessories .accessories_read_more_button {
       margin-top: auto;
       margin-bottom: auto; }
+      @media screen and (max-width: 799px) {
+        #loaded_page #accessories .accessories_read_more_button {
+          margin-top: 20px;
+          margin-bottom: 20px; } }
     #loaded_page #accessories #paijan_headphones_image {
       background: url("../images/headphones.bmp") no-repeat center center;
       background-size: cover; }
@@ -545,9 +542,13 @@ footer {
   @media screen and (max-width: 799px) {
     footer {
       font-size: 0.7em;
-      height: 50px; } }
+      height: 100px;
+      flex-direction: column; } }
   footer p {
     font-size: 0.8em;
     margin: 0 10px 0 10px; }
+    @media screen and (max-width: 799px) {
+      footer p {
+        margin: 5px 0 5px 0; } }
 
 /*# sourceMappingURL=index.css.map */
