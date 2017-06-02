@@ -440,6 +440,7 @@ footer {
   height: $footer_height;
   font-family: "Open Sans", sans-serif;
   margin-top: 5vh;
+  color: white;
 
   @media screen and (max-width: $max_mobile_width) {
     font-size: 0.7em;

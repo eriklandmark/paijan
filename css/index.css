@@ -397,8 +397,11 @@ body {
   #loaded_page #information {
     display: flex;
     flex-direction: row;
-    width: 90vw;
-    height: 45vw; }
+    width: 90vw; }
+    @media screen and (max-width: 799px) {
+      #loaded_page #information {
+        flex-direction: column;
+        align-items: center; } }
     #loaded_page #information #info_text {
       width: 50%;
       height: 100%;
@@ -407,21 +410,25 @@ body {
       justify-content: center;
       align-items: center;
       text-align: center; }
+      @media screen and (max-width: 799px) {
+        #loaded_page #information #info_text {
+          width: 100%; } }
     #loaded_page #information #info_image {
       width: 50%;
-      height: 100%;
       background-color: transparent;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center; }
+      @media screen and (max-width: 799px) {
+        #loaded_page #information #info_image {
+          width: 80%; } }
       #loaded_page #information #info_image img {
         width: 100%; }
   #loaded_page #comparison {
     width: 95vw; }
     #loaded_page #comparison #comp_images {
       width: 100%;
-      height: 45vh;
       display: flex;
       flex-direction: row;
       justify-content: space-around;
@@ -429,7 +436,7 @@ body {
       #loaded_page #comparison #comp_images .comp_image {
         width: 45%; }
         #loaded_page #comparison #comp_images .comp_image img {
-          width: 100%; }
+          width: 90%; }
     #loaded_page #comparison #comp_table {
       display: flex;
       flex-direction: column;
@@ -446,9 +453,14 @@ body {
           text-align: center; }
           #loaded_page #comparison #comp_table table td p {
             margin: 5px 0 5px 0; }
-      #loaded_page #comparison #comp_table #small_text {
-        margin-top: 30px;
-        font-size: 0.5em; }
+        @media screen and (max-width: 799px) {
+          #loaded_page #comparison #comp_table table {
+            width: 100%; } }
+      #loaded_page #comparison #comp_table #comp_small_text {
+        margin-top: 30px; }
+        #loaded_page #comparison #comp_table #comp_small_text p {
+          margin: 0;
+          font-size: 0.5em; }
   #loaded_page #error_main {
     font-family: "Open Sans", sans-serif;
     font-size: 1em;
@@ -528,7 +540,8 @@ footer {
   background-color: #4caf50;
   height: 80px;
   font-family: "Open Sans", sans-serif;
-  margin-top: 5vh; }
+  margin-top: 5vh;
+  color: white; }
   @media screen and (max-width: 799px) {
     footer {
       font-size: 0.7em;
