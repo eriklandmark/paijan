@@ -1,6 +1,5 @@
 @import "about-paijan";
 @import "accessories";
-@import "faq";
 @import "support";
 @import "error_page";
 @import "home";
@@ -425,7 +424,6 @@ body {
   display: flex;
   flex-direction: column;
 
-  @include faq;
   @include accessories;
   @include support;
   @include about-paijan;
