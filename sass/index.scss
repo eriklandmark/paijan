@@ -88,9 +88,18 @@ body {
     height: 100%;
   }
 
-  .nav_wrapper {
+  .nav_wrapper_left {
     width: 100%;
     max-width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .nav_wrapper_right {
+    width: 100%;
+    max-width: 180px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
