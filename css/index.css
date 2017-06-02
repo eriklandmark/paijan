@@ -315,10 +315,10 @@ body {
       margin-top: auto;
       margin-bottom: auto; }
     #loaded_page #accessories #paijan_headphones_image {
-      background: url("../images/slideshow_4.bmp") no-repeat center center;
+      background: url("../images/headphones.bmp") no-repeat center center;
       background-size: cover; }
     #loaded_page #accessories #wireless_charger_image {
-      background: url("../images/slideshow_2.bmp") no-repeat center center;
+      background: url("../images/wireless_charger.jpg") no-repeat center center;
       background-size: cover; }
     #loaded_page #accessories .product_image {
       width: 50%; }
@@ -358,10 +358,11 @@ body {
     flex-direction: column;
     align-items: center;
     font-family: "Open Sans", sans-serif;
-    font-size: 1em; }
+    font-size: 1em;
+    margin-top: calc(80vh - 60px); }
   #loaded_page #bildspel_on_paijan #bild_1, #loaded_page #bildspel_on_paijan #bild_2, #loaded_page #bildspel_on_paijan #bild_3, #loaded_page #bildspel_on_paijan #bild_4 {
     width: 100vw;
-    height: calc(50vh - 60px);
+    height: calc(80vh - 60px);
     position: absolute;
     top: 60px;
     left: 0;
@@ -370,13 +371,17 @@ body {
   #loaded_page #bildspel_on_paijan #bild_1 {
     z-index: 11;
     opacity: 1;
-    background-image: url("../images/slideshow_1.bmp"); }
+    background: url("../images/slideshow_1.jpg") no-repeat center center;
+    background-size: cover; }
   #loaded_page #bildspel_on_paijan #bild_2 {
-    background-image: url("../images/slideshow_2.bmp"); }
+    background: url("../images/slideshow_2.jpg") no-repeat center center;
+    background-size: cover; }
   #loaded_page #bildspel_on_paijan #bild_3 {
-    background-image: url("../images/slideshow_3.bmp"); }
+    background: url("../images/slideshow_3.jpg") no-repeat center center;
+    background-size: cover; }
   #loaded_page #bildspel_on_paijan #bild_4 {
-    background-image: url("../images/slideshow_4.bmp"); }
+    background: url("../images/slideshow_4.bmp") no-repeat center center;
+    background-size: cover; }
   #loaded_page .slideshow_fadeout {
     animation-duration: 0.5s;
     animation-name: slideshowfadeout;
@@ -386,37 +391,14 @@ body {
     opacity: 1; }
   to {
     opacity: 0; } }
-  #loaded_page #comparison {
-    width: 95vw; }
-    #loaded_page #comparison #comp_images {
-      width: 100%;
-      height: 45vh;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      align-items: center; }
-      #loaded_page #comparison #comp_images img {
-        height: 100%; }
-    #loaded_page #comparison #comp_table {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%; }
-      #loaded_page #comparison #comp_table table {
-        width: 80%; }
-        #loaded_page #comparison #comp_table table th {
-          font-weight: bold; }
-        #loaded_page #comparison #comp_table table td {
-          width: 33%;
-          text-align: center; }
-          #loaded_page #comparison #comp_table table td p {
-            margin: 5px 0 5px 0; }
+  #loaded_page #big_title {
+    letter-spacing: 6px;
+    font-size: 3.6em; }
   #loaded_page #information {
     display: flex;
     flex-direction: row;
     width: 90vw;
-    height: 45vw;
-    margin-top: calc(55vh - 60px); }
+    height: 45vw; }
     #loaded_page #information #info_text {
       width: 50%;
       height: 100%;
@@ -435,6 +417,38 @@ body {
       justify-content: center; }
       #loaded_page #information #info_image img {
         width: 100%; }
+  #loaded_page #comparison {
+    width: 95vw; }
+    #loaded_page #comparison #comp_images {
+      width: 100%;
+      height: 45vh;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center; }
+      #loaded_page #comparison #comp_images .comp_image {
+        width: 45%; }
+        #loaded_page #comparison #comp_images .comp_image img {
+          width: 100%; }
+    #loaded_page #comparison #comp_table {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%; }
+      #loaded_page #comparison #comp_table table {
+        width: 80%; }
+        #loaded_page #comparison #comp_table table th {
+          font-weight: bold; }
+          #loaded_page #comparison #comp_table table th p {
+            margin: 5px 0 5px 0; }
+        #loaded_page #comparison #comp_table table td {
+          width: 33%;
+          text-align: center; }
+          #loaded_page #comparison #comp_table table td p {
+            margin: 5px 0 5px 0; }
+      #loaded_page #comparison #comp_table #small_text {
+        margin-top: 30px;
+        font-size: 0.5em; }
   #loaded_page #error_main {
     font-family: "Open Sans", sans-serif;
     font-size: 1em;

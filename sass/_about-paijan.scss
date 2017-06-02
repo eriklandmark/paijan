@@ -5,12 +5,13 @@
     align-items: center;
     font-family: "Open Sans", sans-serif;
     font-size: 1em;
+    margin-top: calc(80vh - #{$nav_bar_height});
   }
 
   #bildspel_on_paijan {
     #bild_1, #bild_2, #bild_3, #bild_4 {
       width: 100vw;
-      height: calc(50vh - #{$nav_bar_height});
+      height: calc(80vh - #{$nav_bar_height});
       position: absolute;
       top: $nav_bar_height;
       left: 0;
@@ -19,25 +20,25 @@
     }
 
     #bild_1 {
-      //background-color: red;
       z-index: 11;
       opacity: 1;
-      background-image: url("../images/slideshow_1.bmp");
+      background: url("../images/slideshow_1.jpg") no-repeat center center;
+      background-size: cover;
     }
 
     #bild_2 {
-      //background-color: blue;
-      background-image: url("../images/slideshow_2.bmp");
+      background: url("../images/slideshow_2.jpg") no-repeat center center;
+      background-size: cover;
     }
 
     #bild_3 {
-      //background-color: green;
-      background-image: url("../images/slideshow_3.bmp");
+      background: url("../images/slideshow_3.jpg") no-repeat center center;
+      background-size: cover;
     }
 
     #bild_4 {
-      //background-color: yellow;
-      background-image: url("../images/slideshow_4.bmp");
+      background: url("../images/slideshow_4.bmp") no-repeat center center;
+      background-size: cover;
     }
   }
 
@@ -56,44 +57,9 @@
     }
   }
 
-  #comparison {
-    width: 95vw;
-
-    #comp_images {
-      width: 100%;
-      height: 45vh;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      align-items: center;
-
-      img {
-        height: 100%;
-      }
-    }
-
-    #comp_table {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-
-      table {
-        width: 80%;
-
-        th {
-          font-weight: bold;
-        }
-
-        td {
-          width: 33%;
-          text-align: center;
-          p {
-            margin: 5px 0 5px 0;
-          }
-        }
-      }
-    }
+  #big_title {
+    letter-spacing: 6px;
+    font-size: 3.6em;
   }
 
   #information {
@@ -101,7 +67,6 @@
     flex-direction: row;
     width: 90vw;
     height: 45vw;
-    margin-top: calc(55vh - #{$nav_bar_height});
 
     #info_text {
       width: 50%;
@@ -124,6 +89,58 @@
 
       img {
         width: 100%;
+      }
+    }
+  }
+
+  #comparison {
+    width: 95vw;
+
+    #comp_images {
+      width: 100%;
+      height: 45vh;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+
+      .comp_image {
+        width: 45%;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    #comp_table {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+
+      table {
+        width: 80%;
+
+        th {
+          font-weight: bold;
+          p {
+            margin: 5px 0 5px 0;
+          }
+        }
+
+        td {
+          width: 33%;
+          text-align: center;
+          p {
+            margin: 5px 0 5px 0;
+          }
+        }
+      }
+
+      #small_text  {
+        margin-top: 30px;
+        font-size: 0.5em;
       }
     }
   }
