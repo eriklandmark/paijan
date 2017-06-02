@@ -332,7 +332,7 @@ body {
           margin-top: 20px;
           margin-bottom: 20px; } }
     #loaded_page #accessories #paijan_headphones_image {
-      background: url("../images/headphones.bmp") no-repeat center center;
+      background: url("../images/headphones.jpg") no-repeat center center;
       background-size: cover; }
     #loaded_page #accessories #wireless_charger_image {
       background: url("../images/wireless_charger.jpg") no-repeat center center;
@@ -410,7 +410,7 @@ body {
     background: url("../images/slideshow_3.jpg") no-repeat center center;
     background-size: cover; }
   #loaded_page #bildspel_on_paijan #bild_4 {
-    background: url("../images/slideshow_4.bmp") no-repeat center center;
+    background: url("../images/slideshow_4.jpg") no-repeat center center;
     background-size: cover; }
   #loaded_page .slideshow_fadeout {
     animation-duration: 0.5s;
@@ -560,7 +560,7 @@ body {
     #loaded_page #display_1, #loaded_page #display_3 {
       flex-direction: column-reverse; } }
 
-#info_msg {
+#modal_box {
   position: fixed;
   left: 0;
   top: 0;
@@ -573,7 +573,7 @@ body {
   justify-content: center;
   align-items: center;
   font-family: "Open Sans", sans-serif; }
-  #info_msg #info_msg_bg {
+  #modal_box #modal_box_bg {
     background-color: #4caf50;
     padding: 30px;
     border-radius: 30px;

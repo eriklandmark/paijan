@@ -435,7 +435,7 @@ body {
   @include home;
 }
 
-#info_msg {
+#modal_box {
   position: fixed;
   left: 0;
   top: 0;
@@ -449,7 +449,7 @@ body {
   align-items: center;
   font-family: "Open Sans", sans-serif;
 
-  #info_msg_bg {
+  #modal_box_bg {
     background-color: #4caf50;
     padding: 30px;
     border-radius: 30px;
