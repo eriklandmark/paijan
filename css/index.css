@@ -353,6 +353,12 @@ body {
           #loaded_page #accessories #sound_devices #paijan_headphones, #loaded_page #accessories #sound_devices #wireless_charger, #loaded_page #accessories #charging_devices #paijan_headphones, #loaded_page #accessories #charging_devices #wireless_charger {
             flex-direction: column;
             min-height: 500px; } }
+  #loaded_page #about_paijan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1em; }
   #loaded_page #bildspel_on_paijan #bild_1, #loaded_page #bildspel_on_paijan #bild_2, #loaded_page #bildspel_on_paijan #bild_3, #loaded_page #bildspel_on_paijan #bild_4 {
     width: 100vw;
     height: calc(50vh - 60px);
@@ -380,6 +386,55 @@ body {
     opacity: 1; }
   to {
     opacity: 0; } }
+  #loaded_page #comparison {
+    width: 95vw; }
+    #loaded_page #comparison #comp_images {
+      width: 100%;
+      height: 45vh;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center; }
+      #loaded_page #comparison #comp_images img {
+        height: 100%; }
+    #loaded_page #comparison #comp_table {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%; }
+      #loaded_page #comparison #comp_table table {
+        width: 80%; }
+        #loaded_page #comparison #comp_table table th {
+          font-weight: bold; }
+        #loaded_page #comparison #comp_table table td {
+          width: 33%;
+          text-align: center; }
+          #loaded_page #comparison #comp_table table td p {
+            margin: 5px 0 5px 0; }
+  #loaded_page #information {
+    display: flex;
+    flex-direction: row;
+    width: 90vw;
+    height: 45vw;
+    margin-top: calc(55vh - 60px); }
+    #loaded_page #information #info_text {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center; }
+    #loaded_page #information #info_image {
+      width: 50%;
+      height: 100%;
+      background-color: transparent;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; }
+      #loaded_page #information #info_image img {
+        width: 100%; }
   #loaded_page #error_main {
     font-family: "Open Sans", sans-serif;
     font-size: 1em;

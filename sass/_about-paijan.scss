@@ -1,4 +1,12 @@
 @mixin about-paijan {
+  #about_paijan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1em;
+  }
+
   #bildspel_on_paijan {
     #bild_1, #bild_2, #bild_3, #bild_4 {
       width: 100vw;
@@ -45,6 +53,78 @@
     }
     to {
       opacity: 0;
+    }
+  }
+
+  #comparison {
+    width: 95vw;
+
+    #comp_images {
+      width: 100%;
+      height: 45vh;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+
+      img {
+        height: 100%;
+      }
+    }
+
+    #comp_table {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+
+      table {
+        width: 80%;
+
+        th {
+          font-weight: bold;
+        }
+
+        td {
+          width: 33%;
+          text-align: center;
+          p {
+            margin: 5px 0 5px 0;
+          }
+        }
+      }
+    }
+  }
+
+  #information {
+    display: flex;
+    flex-direction: row;
+    width: 90vw;
+    height: 45vw;
+    margin-top: calc(55vh - #{$nav_bar_height});
+
+    #info_text {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    #info_image {
+      width: 50%;
+      height: 100%;
+      background-color: transparent;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 100%;
+      }
     }
   }
 }
