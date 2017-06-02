@@ -13,4 +13,18 @@
       cursor: pointer;
     }
   }
+
+  .button-action {
+    border: none;
+    background-color: #2E7D32;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1em;
+    padding: 5px 20px 5px 20px;
+    color: white;
+    margin-top: 20px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }

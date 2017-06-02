@@ -8,8 +8,15 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
         <link rel="icon" type="image/png" href="images/favicon.png" sizes="32x32">
     </head>
-    <script src="js/about-paijan.js"></script>
     <body>
+
+        <div id="info_msg">
+            <div id="info_msg_bg">
+                <p id="info_msg_text"></p>
+                <input type="button" class="button-action" onclick="close_msg_box()" value="Ok" >
+            </div>
+        </div>
+
         <nav id="desktop_nav">
             <div id="left_nav">
                 <div class="nav_wrapper_left">
@@ -19,20 +26,18 @@
                 </div>
             </div>
             <div onclick="loadPage('home', document.getElementById('nav_title_home'))" id="center_nav">
-                <!--<img src="images/logga_white.png" alt="">-->
                 <p class="logga_text" id="desktop_nav_logga">PAIJAN</p>
             </div>
             <div id="right_nav">
                 <div class="nav_wrapper_right">
                     <p onclick="loadPage('support', this)" class="nav_title" id="nav_title_support">Support</p>
-                    <img src="icons/search.svg" alt="">
+                    <img src="icons/search.svg" alt="" onclick="msg('Sorry! Denna funktion är ännu inte implementerad.')">
                 </div>
             </div>
         </nav>
 
         <nav id="mobile_nav">
             <div id="left_M_nav">
-                <!--<img src="images/logga.png" alt="" onclick="loadPage('home', document.getElementById('nav_title_home'))">-->
                 <p class="logga_text" id="mobile_nav_logga">PAIJAN</p>
             </div>
             <div id="right_M_nav">
@@ -41,7 +46,6 @@
         </nav>
 
         <menu id="mobile_menu">
-            <!--<img src="images/logga.png" alt="">-->
             <p class="logga_text" id="mobile_menu_logga">PAIJAN</p>
 
             <div id="mobile_links">
@@ -71,6 +75,5 @@
             <p>Cookies</p>
         </footer>
     </body>
-    <script src="js/index.js"></script>
-    <script src="js/lib.js"></script>
+    <script src="js/index.min.js"></script>
 </html>

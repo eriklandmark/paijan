@@ -65,6 +65,8 @@ body {
     flex-direction: row;
     justify-content: space-around;
     align-items: center; }
+    #desktop_nav .nav_wrapper_right img:hover {
+      cursor: pointer; }
   #desktop_nav #left_nav {
     display: flex;
     flex-direction: row;
@@ -299,6 +301,17 @@ body {
   .button-read_more:hover {
     cursor: pointer; }
 
+.button-action {
+  border: none;
+  background-color: #2E7D32;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
+  padding: 5px 20px 5px 20px;
+  color: white;
+  margin-top: 20px; }
+  .button-action:hover {
+    cursor: pointer; }
+
 #loaded_page {
   margin-top: 60px;
   display: flex;
@@ -365,7 +378,7 @@ body {
     width: 100vw; }
     #loaded_page #support_div div {
       font-family: "Open Sans", sans-serif;
-      width: 90vw;
+      width: 70vw;
       background-color: #E8F5E9;
       padding: 20px; }
       #loaded_page #support_div div h1 {
@@ -414,7 +427,8 @@ body {
   #loaded_page #information {
     display: flex;
     flex-direction: row;
-    width: 90vw; }
+    width: 90vw;
+    margin-bottom: 15vh; }
     @media screen and (max-width: 799px) {
       #loaded_page #information {
         flex-direction: column;
@@ -545,6 +559,29 @@ body {
       width: 50vmin; }
     #loaded_page #display_1, #loaded_page #display_3 {
       flex-direction: column-reverse; } }
+
+#info_msg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 1000;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Open Sans", sans-serif; }
+  #info_msg #info_msg_bg {
+    background-color: #4caf50;
+    padding: 30px;
+    border-radius: 30px;
+    width: 70vw;
+    max-width: 400px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 0 20px 0 black; }
 
 footer {
   display: flex;

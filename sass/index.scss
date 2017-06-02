@@ -103,6 +103,10 @@ body {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+
+    img:hover {
+      cursor: pointer;
+    }
   }
 
   #left_nav {
@@ -429,6 +433,32 @@ body {
   @include about-paijan;
   @include error_page;
   @include home;
+}
+
+#info_msg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255,255,255,0.5);
+  z-index: 1000;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
+
+  #info_msg_bg {
+    background-color: #4caf50;
+    padding: 30px;
+    border-radius: 30px;
+    width: 70vw;
+    max-width: 400px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 0 20px 0 black;
+  }
 }
 
 footer {
